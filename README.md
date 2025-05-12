@@ -1,4 +1,5 @@
 📱 SMS Spam Classifier
+
 A machine learning model that detects whether an SMS (text message) is spam or not spam (ham) using Natural Language Processing (NLP) and machine learning — with a simple Streamlit web interface to test messages instantly.
 
 🔍 Features
