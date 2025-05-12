@@ -1,63 +1,46 @@
 📱 SMS Spam Classifier
-A Machine Learning Model to Detect Spam Messages
+A machine learning model that detects whether an SMS (text message) is spam or not spam (ham) using Natural Language Processing (NLP) and machine learning — with a simple Streamlit web interface to test messages instantly.
 
-🔍 Overview
-This project detects whether an SMS (text message) is spam or not spam (ham) using Natural Language Processing (NLP) and machine learning. It uses:
-✔ Text preprocessing (cleaning, tokenization, stemming)
-✔ TF-IDF vectorization (to convert text into numbers)
-✔ Naive Bayes classifier (trained to predict spam/ham)
-✔ Streamlit (for a simple web interface)
+🔍 Features
+Text Preprocessing
 
-Try it out! Paste a message, and the model will instantly classify it.
+Lowercasing
+
+Removing punctuation and stopwords
+
+Stemming (e.g., running → run)
+
+TF-IDF Vectorization to convert text into numbers
+
+Naive Bayes Classifier (trained on 5,000+ SMS messages)
+
+Streamlit Web App for instant classification
+
+🛠️ Tech Stack
+Backend: Python, Scikit-learn, NLTK
+
+Frontend: Streamlit
+
+ML Algorithms: TF-IDF Vectorizer, Naive Bayes Classifier
+
+Version Control: Git & GitHub
 
 🚀 How to Run This Project
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/SMS-Spam-Detector.git
 cd SMS-Spam-Detector
 
-2️⃣ Install Required Libraries
+2️⃣ Install Dependencies
 pip install -r requirements.txt
 
-3️⃣ Download NLTK Data (Required for Text Processing)
+3️⃣ Download NLTK Data
 python -m nltk.downloader punkt stopwords
 
 4️⃣ Run the Web App
 streamlit run app/app.py
-➡ A browser window will open where you can test the model!
 
-🛠️ How It Works
-Text Preprocessing
+➡ A browser window will open to test the model!
 
-Converts text to lowercase
-
-Removes punctuation and stopwords (e.g., "the", "and")
-
-Applies stemming (reducing words like "running" → "run")
-
-Machine Learning Model
-
-Trained on a dataset of 5,000+ SMS messages
-
-Uses TF-IDF to convert words into numerical features
-
-Naive Bayes algorithm for classification (98% accuracy)
-
-Streamlit Web Interface
-
-Simple, user-friendly design
-
-Just paste a message → Get instant prediction
-
-📂 Project Structure
-SMS-Spam-Detector/
-├── app/
-│ ├── app.py — Streamlit application
-│ ├── model.pkl — Trained ML model
-│ └── vectorizer.pkl — TF-IDF vectorizer
-├── notebooks/
-│ └── spam_model.ipynb — Jupyter notebook (training code)
-├── requirements.txt — Python dependencies
-└── README.md — This file
 
 📊 Model Performance
 Metric	Score
@@ -65,11 +48,11 @@ Accuracy	98%
 Precision	97%
 Recall	96%
 
-(Tested on a dataset of 1,000 messages.)
+Tested on a dataset of 1,000 SMS messages.
 
 💡 Future Improvements
-Add more training data for better accuracy
+Expand training dataset for better generalization
 
-Include Deep Learning (LSTM/Transformers) for better NLP
+Integrate Deep Learning models (LSTM, Transformers)
 
-Deploy on Streamlit Cloud for public access
+Deploy publicly on Streamlit Cloud
